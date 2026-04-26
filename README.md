@@ -1,42 +1,40 @@
-# ai-dev-exp-template
+# Day059 — 見積もり条件ずれ見張り
 
-Vite-based single-page template for `ai-dev-day-XXX` repositories.
+> 複数見積もりの前提差を見つけやすくするためのツールです。
+>
+> Complexity Tier: medium
+>
+> Selected Components: none
+>
+> Family / Mechanic: quote_assumption_diff / diff_grid
+>
+> Input -> Output: assumption_rows -> assumption_heatmap
+>
+> Audience Promise: 比べるべき違いと確認すべき点がすぐ分かる。
 
-## Required meta.json fields
+## 使い方
 
-- `day` (e.g. `Day001`)
-- `title`
-- `description`
-- `genre`
-- `theme`
-- `story_summary`
+このツールでできること
+複数見積もりの前提差を見つけやすくするためのツールです。
 
-## Theme behavior
+こんな時に使います
+複数社の見積もりが揃っても条件差が読めない時に使います。
 
-- `src/themes.js` defines 8 visual themes.
-- Runtime applies `meta.json.theme` using CSS variables.
-- Day repos should set `theme` with a day-seeded deterministic selector.
+使い方
+1. 見積もりを並べる
+2. 条件行を足す
+3. 差と聞き返しを見る
 
-## Component Packs (tiered build)
+## Story
 
-- Template reads `complexity_tier` / `selected_components` from `meta.json`.
-- `selected_components` is missing: runs as small tier baseline with all packs OFF.
-- Unknown component names are ignored safely.
-- Each pack can be toggled independently and app core flow still works.
+- [制作ストーリー](./STORY.md)
+- Complexity hint: Implement the locked brief with one clear hero interaction and keep the main screenshot readable.
+- Publish hook: 項目と前提を自分で足し引きしながら並べると、価格差より先に抜け条件と聞き返し項目が見える。
 
-Supported packs:
+## Demo
 
-- `reason_panel`
-- `sample_inputs`
-- `local_storage`
-- `comparison_view`
-- `history_panel`
-- `export_suite`
-- `step_ui`
+🌐 [GitHub Pages](https://ryo909.github.io/ai-dev-day-059/)
 
-### Quality/Fallback integration
+---
 
-- Every pack root includes `data-quality-marker="<pack_name>"` for evaluator detection.
-- Runtime manifest is published to `window.__COMPONENT_PACKS__` and script node `#componentPackManifest`.
-- Static fallback manifest exists at `public/component-pack-manifest.json`.
-- Medium/Large can increase visual depth safely by selecting more packs without changing core logic.
+Day059 / #100日開発
