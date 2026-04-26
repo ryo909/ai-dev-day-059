@@ -1,11 +1,11 @@
 {
   "title": "見積もり条件ずれ見張り",
   "archetype": "diff_grid",
-  "interaction_model": "structured_multi_field",
-  "primary_layout": "two_column_workbench",
-  "result_presentation_style": "stacked_result_cards",
-  "palette_motif": "neutral slate / white",
-  "main_cta": "サンプルで試す",
-  "intro_variant": "generic",
-  "ui_variant": "generic"
+  "interaction_model": "edit_assumption_rows_across_vendors",
+  "primary_layout": "assumption_grid_with_gap_summary",
+  "result_presentation_style": "gap_rows_and_followup_questions",
+  "palette_motif": "見積もりネイビー",
+  "main_cta": "3社見積もりで試す",
+  "intro_variant": "quote_diff",
+  "ui_variant": "quote"
 }
